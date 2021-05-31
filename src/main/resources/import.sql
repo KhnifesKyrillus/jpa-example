@@ -26,6 +26,8 @@ insert into bank
 values (1, 'Sparkasse Neunkirchen', 1);
 insert into bank
 values (2, 'Sparkasse Linz', 4);
+insert into bank
+values (3, 'Sparkasse Linz', 4);
 -- endregion
 
 -- region insert_employee

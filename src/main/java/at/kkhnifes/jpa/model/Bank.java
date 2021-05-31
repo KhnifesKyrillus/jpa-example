@@ -5,9 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@NamedQuery(name = "Bank.getEmployeesByBankId", query = "SELECT b.name, e.department, e.firstName, e.surname, e.salary FROM Employee e JOIN Bank b on e.bank.id = (:bankId)")
-@NamedQuery(name = "Bank.getAllOtherCustomers", query = "SELECT b.name, c.firstName, c.surname, c.salary FROM Customer c LEFT OUTER JOIN Bank b on c.bank.id = (:bankId)")
-@NamedQuery(name = "Bank.getAllBankDirectors", query = "SELECT e.department, e.firstName, e.surname, e.salary FROM Employee e JOIN Bank b on e.bank.id = b.id where e.id=b.director.id")
+@NamedQuery(name = "Bank.getEmployeesByBankId", query = "SELECT b.name, e.department, e.firstName, e.surname, e.salary FROM Employee e JOIN Bank b on e.bank.id = b.id where b.id=(:bankId)")
+@NamedQuery(name = "Bank.getAllBankDirectors", query = "SELECT b.name, e.department, e.firstName, e.surname, e.salary FROM Employee e JOIN Bank b on e.bank.id = b.id where e.id=b.director.id")
 public class Bank {
     @Id
     @GeneratedValue

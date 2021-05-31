@@ -3,7 +3,6 @@ package at.kkhnifes.jpa;
 import at.kkhnifes.jpa.model.Account;
 import at.kkhnifes.jpa.model.Bank;
 import at.kkhnifes.jpa.model.Customer;
-import at.kkhnifes.jpa.model.Employee;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -37,7 +36,7 @@ public class DatabaseRepository {
 
     public List<Object[]> getEmployeesByBankId() {
         return em.createNamedQuery("Bank.getEmployeesByBankId", Object[].class)
-                .setParameter("bankId",Long.valueOf(2) ).getResultList();
+                .setParameter("bankId", Long.valueOf(2)).getResultList();
     }
 
     public List<Object[]> getNotDirectors() {

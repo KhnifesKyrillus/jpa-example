@@ -1,9 +1,5 @@
 package at.kkhnifes.jpa;
 
-import at.kkhnifes.jpa.model.Bank;
-import at.kkhnifes.jpa.model.Customer;
-import at.kkhnifes.jpa.model.Employee;
-
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.GET;

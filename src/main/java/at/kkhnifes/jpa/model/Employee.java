@@ -3,7 +3,7 @@ package at.kkhnifes.jpa.model;
 import javax.persistence.*;
 
 @Entity
-@NamedQuery(name = "Employee.getNotDirectors",query = "select e.id, e.firstName, e.surname from Employee e left outer join Bank b on b.director.id = e.id where b.id is null")
+@NamedQuery(name = "Employee.getNotDirectors", query = "select e.id, e.firstName, e.surname from Employee e left outer join Bank b on b.director.id = e.id where b.id is null")
 public class Employee {
 
     @Id
